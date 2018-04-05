@@ -13,14 +13,13 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 
 module.exports = {
-
     entry: {
         app: './src/script/index.js'
     },
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.[hash:12].js',
+        filename: '[name].bundle.[hash:12].js'
     },
 
     module: {
@@ -39,11 +38,13 @@ module.exports = {
                 test: /\.(jpg|png|png|jpg|jpeg|gif|woff|ttf|eot|svg|woff2|webm|mp4)$/,
                 use: [
                     {
-                        loader: 'file-loader?[limit=10000]',
+                        loader: 'url-loader',
                         options: {
                             name: '[name][hash:12].[ext]',
-                            outputPath: 'assets/images/',
-                            publicPath: 'images/'
+                            outputPath: 'images/',
+                            publicPath: 'images/',
+                            limit: 1024,
+                            fallback: 'file-loader'
                         }
                     }
                 ],
@@ -55,32 +56,6 @@ module.exports = {
                 exclude: /node_modules/
             }
         ]
-    },
-
-    optimization: {
-        minimizer: [
-            new UglifyJsPlugin({
-              cache: true,
-              parallel: true,
-              sourceMap: true // set to true if you want JS source maps
-            }),
-            new OptimizeCSSAssetsPlugin({})
-          ],
-        minimize: false,
-        runtimeChunk: {
-            name: 'vendor',
-        },
-        splitChunks: {
-            cacheGroups: {
-                default: false,
-                commons: {
-                    test: /node_modules/,
-                    name: "vendor",
-                    chunks: "initial",
-                    minSize: 1
-                }
-            }
-        }
     },
 
     plugins: [
@@ -103,9 +78,6 @@ module.exports = {
                 yandex: false,
                 windows: false
             }
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery'
         }),
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({

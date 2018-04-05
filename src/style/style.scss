@@ -1,6 +1,36 @@
 
+// ABSTRACT
+@import './abstract/functions';
+@import './abstract/mixins';
+@import './abstract/variables';
 
-body {
-    background: orangered;
-    // background-image: url('../img/contact-large.jpg');
-}
+
+// BASE
+@import './base/animations';
+@import './base/global';
+@import './base/typography';
+@import './base/utilities';
+
+
+
+// PAGES
+@import './pages/home';
+
+
+
+// LAYOUT
+@import './layout/grid';
+@import './layout/navigation';
+@import './layout/header';
+@import './layout/footer';
+
+
+
+
+// COMPONENTS
+@import './components/buttons';
+@import './components/service';
+@import './components/testimonial';
+@import './components/form';
+@import './components/project';
+@import './components/social';
