@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 
@@ -31,11 +32,15 @@ module.exports = merge(common, {
     },
 
     plugins: [
-        new MiniCssExtractPlugin({
+          new MiniCssExtractPlugin({
             filename: "style-[contenthash:10].css",
           }),
           new UglifyJSPlugin({
               sourceMap: true
-          })
-    ]
+          }),
+        //   new CopyWebpackPlugin([
+        //     {from: "./dist/*/**", to: "./node-app/dist"},
+        //     {from: "./index.js", to: "./node-app"}
+        //   ])
+        ]
 })

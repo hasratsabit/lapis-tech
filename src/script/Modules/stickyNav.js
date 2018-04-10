@@ -16,18 +16,16 @@ const stickyNav = (() => {
       };
 
     const background = document.querySelector('#background');
-    const logo = document.querySelector('#logo');
-    const nav = document.querySelector('#nav');
+    const logo = document.querySelector('.navigation__logo');
+    const navList = document.querySelector('.navigation__list');
 
     function fixedNav() {
         if(window.scrollY >= 100) {
-            background.classList.add('background-active');
-            logo.classList.add('logo-active');
-            nav.classList.add('nav-shrink');
+            navList.classList.add('nav-list-expanded');
+            logo.classList.add('logo-expanded');
         }else {
-            background.classList.remove('background-active');
-            logo.classList.remove('logo-active');
-            nav.classList.remove('nav-shrink');
+            navList.classList.remove('nav-list-expanded');
+            logo.classList.remove('logo-expanded');
         }
     }
 

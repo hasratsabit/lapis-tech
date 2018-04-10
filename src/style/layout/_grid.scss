@@ -1,6 +1,15 @@
+
+.row-fluid {
+    min-width: $grid-fluid;
+}
+
+.row {
+    max-width: $grid-width;
+}
+
+.row-fluid,
 .row {
     @include clearfix;
-    max-width: $grid-width;
     margin: 0 auto;
     padding: 0 3rem;
 

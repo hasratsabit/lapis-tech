@@ -12,7 +12,6 @@ const smoothScroll = (() => {
     body = document.body;
    
       links.forEach((link) => {
-   
           link.addEventListener('click', triggerScroll)
    
           function triggerScroll() {

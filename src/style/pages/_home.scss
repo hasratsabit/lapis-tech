@@ -1,4 +1,4 @@
-.section-technology,
+
 .section-services {
     background-color: $color-grey-light-1;
     padding: 20rem 0;
@@ -9,7 +9,7 @@
     }
 }
 
-
+.section-technology,
 .section-testimonial,
 .section-quality {
     height: 95vh;
@@ -80,6 +80,32 @@
 
 
 .section-technology {
+
+    &--gutter {
+        margin-top: -10rem !important;
+        @include respond(tab-port) {
+            margin-top: 0 !important;
+        }
+
+        @include respond(tab-land) {
+            margin-top: 8rem !important;
+        }
+    }
+
+    background-image: linear-gradient(to right bottom, rgba($color-primary-dark-1, .8), 
+    rgba($color-primary-light-1, .8)),
+    url('../images/testimonials-small.jpg');
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        only screen and (min-width: 125em) {
+        background-image: linear-gradient(to right bottom, rgba($color-primary-dark-1, .8), 
+        rgba($color-primary-light-1, .8)),
+        url('../images/testimonials-large.jpg');
+    }
+
+
+
     &__tech {
         font-size: 8rem;
         height: 100%;
@@ -99,6 +125,7 @@
     }
 }
 
+/*
 .section-testimonial {
     background-image: linear-gradient(to right bottom, rgba($color-primary-dark-1, .8), 
                       rgba($color-primary-light-1, .8)),
@@ -120,6 +147,8 @@
     }
 }
 
+*/
+
 .section-project {
     background-color: $color-grey-light-1;
     padding: 20rem 0;
@@ -140,6 +169,10 @@
 
 .section-contact {
     background-color: $color-grey-light-1;
+    padding: 20rem 0;
     margin-top: -15vh;
-    padding-bottom: 10rem;
+
+    &--gutter {
+        margin-top: 10rem;
+    }
 }

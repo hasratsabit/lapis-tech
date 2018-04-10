@@ -62,25 +62,47 @@
         }
     }
 
-    &__nav {
+    &__social,
+    &__nav,
+    &__logo-box {
         width: 100%;
         text-align: center;
+        margin: 3rem 0;
         @include respond(tab-port) {
-            float: left;
-            width: auto
-    
+           margin: 0; 
+           float: left;
+        }
+    }
+
+    &__nav {
+        @include respond(tab-port){
+            width: calc((100% / 2) - 15%);
+            text-align: left;
         }
     }
 
     &__social {
-        text-align: center;
-        width: 100%;
-        margin: 3rem 0;
-        @include respond(tab-port) {
-            width: auto;
-            float: right;
-            margin: 0;
+        @include respond(tab-port){
+            width: 15%;
+            transform: translateX(13rem);
         }
+
+        @include respond(tab-land){
+            transform: translateX(20rem);
+        }
+    }
+
+
+    &__logo-box {
+        height: 3rem;
+        @include respond(tab-port) {
+            width: calc((100% / 2) - 15%);
+        }
+
+    }
+
+    &__logo {
+        height: 100%;
     }
     
     &__email {
