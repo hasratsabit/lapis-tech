@@ -10,11 +10,28 @@ const smoothScroll = (() => {
    
     //getting body
     body = document.body;
+
    
       links.forEach((link) => {
           link.addEventListener('click', triggerScroll)
+          
+          // // Get the logo for scroll. It has a different class from the links.
+          // const logo = document.querySelector('.navigation__logo-link');
+          // logo.addEventListener('click', triggerScroll);
+
+          // const headerButton = document.querySelector('.header-button');
+          // headerButton.addEventListener('click', triggerScroll);
    
           function triggerScroll() {
+
+            // When in mobile size, remove the navbar and background when a link is clicked.
+            const navBackground = document.querySelector('.navigation__background');
+            const navbar = document.querySelector('.navigation__nav');
+
+            navBackground.classList.remove('background-expanded');
+            navbar.classList.remove('navbar-expanded');
+
+
               //getting current scroll position
               var scrollTop = Math.round(body.scrollTop || html.scrollTop);
               if (link.hash !== "") {
