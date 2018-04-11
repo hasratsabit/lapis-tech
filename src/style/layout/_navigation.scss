@@ -10,11 +10,14 @@
         height: 5rem;
 
         cursor: pointer;
-        font-size: 2rem;
         z-index: 2000;
         transition: all .3s ease-in;
 
+        @include respond(tab-land) {
+            top: .8rem;
         }
+
+    }
 
     &__logo {
         height: 100%;

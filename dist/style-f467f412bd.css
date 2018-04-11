@@ -392,9 +392,11 @@ body {
     width: 30%;
     height: 5rem;
     cursor: pointer;
-    font-size: 2rem;
     z-index: 2000;
     transition: all .3s ease-in; }
+    @media only screen and (min-width: 56.25em) {
+      .navigation__logo-box {
+        top: .8rem; } }
   .navigation__logo {
     height: 100%;
     transform: scale(0.8);
@@ -1020,4 +1022,4 @@ Web design and development
   color: #ff0000; }
 
 
-/*# sourceMappingURL=style-79348b6ea5.css.map*/
+/*# sourceMappingURL=style-f467f412bd.css.map*/
