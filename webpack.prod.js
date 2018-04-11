@@ -38,9 +38,8 @@ module.exports = merge(common, {
           new UglifyJSPlugin({
               sourceMap: true
           }),
-        //   new CopyWebpackPlugin([
-        //     {from: "./dist/*/**", to: "./node-app/dist"},
-        //     {from: "./index.js", to: "./node-app"}
-        //   ])
+          new CopyWebpackPlugin([
+            './index.js', './package.json'
+          ])
         ]
 })
