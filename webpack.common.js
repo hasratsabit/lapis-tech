@@ -18,7 +18,7 @@ module.exports = {
     },
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: '[name].bundle.[hash:12].js'
     },
 
@@ -79,7 +79,7 @@ module.exports = {
                 windows: false
             }
         }),
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['docs']),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             minify: {

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js && cd dist && node index.js"
+    "build": "webpack --config webpack.prod.js && cd docs && node index.js"
   },
   "author": "Hasrat Sabit",
   "license": "ISC",
