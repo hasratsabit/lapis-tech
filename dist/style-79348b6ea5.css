@@ -414,9 +414,6 @@ body {
     opacity: 0;
     transform: translateY(-2rem) scale(1.1);
     transition: all .3s ease-in-out; }
-    @media only screen and (min-width: 56.25em) {
-      .navigation__nav-bg {
-        height: 12vh; } }
   .navigation__nav {
     position: fixed;
     right: 0;
@@ -1023,4 +1020,4 @@ Web design and development
   color: #ff0000; }
 
 
-/*# sourceMappingURL=style-219f6f8458.css.map*/
+/*# sourceMappingURL=style-79348b6ea5.css.map*/
