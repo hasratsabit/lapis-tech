@@ -7,28 +7,24 @@
         left: 2rem;
 
         width: 30%;
-        height: 3rem;
+        height: 5rem;
 
         cursor: pointer;
         font-size: 2rem;
         z-index: 2000;
         transition: all .3s ease-in;
 
-        @include respond(tab-port) {
-            height: 4rem;
-        }
-
         }
 
     &__logo {
         height: 100%;
-        width: 100%;
+        
         // Animation
         transform: scale(.8);
         transition: all .4s ease-in-out;
 
         @include respond(tab-land) {
-            width: auto;
+            
         }
     }
 

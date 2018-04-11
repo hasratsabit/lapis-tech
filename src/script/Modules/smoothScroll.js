@@ -3,7 +3,12 @@ const smoothScroll = (() => {
     var html, body;
 
     //getting all anchor elements
-    var links = document.querySelectorAll('.navigation__link');
+    const links = document.querySelectorAll('.navigation__link');
+
+    const linksArr = Array.from(links);
+        // Get the logo for scroll. It has a different class from the links.
+    linksArr.push(document.querySelector('.navigation__logo-link'));
+    linksArr.push(document.querySelector('.header-button'));
    
     //getting html
     html = document.documentElement;
@@ -12,15 +17,9 @@ const smoothScroll = (() => {
     body = document.body;
 
    
-      links.forEach((link) => {
-          link.addEventListener('click', triggerScroll)
-          
-          // // Get the logo for scroll. It has a different class from the links.
-          // const logo = document.querySelector('.navigation__logo-link');
-          // logo.addEventListener('click', triggerScroll);
+      linksArr.forEach((link) => {
 
-          // const headerButton = document.querySelector('.header-button');
-          // headerButton.addEventListener('click', triggerScroll);
+          link.addEventListener('click', triggerScroll)
    
           function triggerScroll() {
 

@@ -390,22 +390,15 @@ body {
     top: 1.5rem;
     left: 2rem;
     width: 30%;
-    height: 3rem;
+    height: 5rem;
     cursor: pointer;
     font-size: 2rem;
     z-index: 2000;
     transition: all .3s ease-in; }
-    @media only screen and (min-width: 37.5em) {
-      .navigation__logo-box {
-        height: 4rem; } }
   .navigation__logo {
     height: 100%;
-    width: 100%;
     transform: scale(0.8);
     transition: all .4s ease-in-out; }
-    @media only screen and (min-width: 56.25em) {
-      .navigation__logo {
-        width: auto; } }
   .navigation__logo-text {
     font-size: 0.001px;
     z-index: -100; }
@@ -939,7 +932,7 @@ Web design and development
     left: 1rem;
     width: 80%;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.8rem;
     text-align: left;
     color: #FFF; }
   .project__heading-span {
@@ -984,6 +977,8 @@ Web design and development
     background-color: #cd486b; }
   .social-round .social__list--youtube {
     background-color: #ff0000; }
+  .social-round .social__list--linkedin {
+    background-color: #0077B5; }
 
 .social-round .social__link {
   color: #FFF; }
@@ -1000,8 +995,11 @@ Web design and development
 .social-default .social__link .fa-instagram {
   color: #cd486b; }
 
+.social-default .social__link .fa-linkedin {
+  color: #0077B5; }
+
 .social-default .social__link .fa-youtube {
   color: #ff0000; }
 
 
-/*# sourceMappingURL=style-0fb8ef8307.css.map*/
+/*# sourceMappingURL=style-934c29b6ae.css.map*/

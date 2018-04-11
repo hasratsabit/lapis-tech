@@ -35,6 +35,7 @@
         &--facebook {background-color: $color-facebook-dark}
         &--instagram {background-color: $color-instagrap-dark}
         &--youtube {background-color: $color-youtube-dark}
+        &--linkedin { background-color:  $color-linkedin-dark}
     }
 
     .social__link {
@@ -54,6 +55,7 @@
         .fa-twitter { color: $color-twitter-light}
         .fa-facebook-f {color: $color-facebook-dark}
         .fa-instagram {color: $color-instagrap-dark}
+        .fa-linkedin { color: $color-linkedin-dark}
         .fa-youtube {color: $color-youtube-dark}
     }
 }
